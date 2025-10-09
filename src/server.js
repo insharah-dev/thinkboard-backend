@@ -15,13 +15,14 @@ const __dirname = path.resolve()
 
 if (process.env.NODE_ENV !== "production") {
     app.use(
-        cors({
-            origin: [
-                "http://localhost:5173",
-                "https://thinkboard-frontend-eight.vercel.app"
-            ]
-        })
-    );
+    cors({
+        origin: [
+            "http://localhost:5173",                             // local frontend
+            "https://thinkboard-frontend-eight.vercel.app",      // live frontend
+            "https://thinkboard-backend-gold.vercel.app"         // backend URL also allow
+        ]
+    })
+);
 }
 app.use(express.json())
 app.use(rateLimiter)
