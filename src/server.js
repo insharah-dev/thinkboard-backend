@@ -31,6 +31,10 @@ app.use(rateLimiter)
 //     next()
 // })
 
+
+app.get("/", (req, res) => {
+    res.redirect("/api/notes");
+});
 app.use("/api/notes", notesRoutes)
 
 if (process.env.NODE_ENV === "production") {
