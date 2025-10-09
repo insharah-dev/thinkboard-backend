@@ -14,12 +14,12 @@ const PORT = process.env.PORT || 3000
 const __dirname = path.resolve()
 
 if (process.env.NODE_ENV !== "production") {
-    app.use(
+   app.use(
     cors({
         origin: [
-            "http://localhost:5173",                             // local frontend
-            "https://thinkboard-frontend-eight.vercel.app",      // live frontend
-            "https://thinkboard-backend-gold.vercel.app"         // backend URL also allow
+            "http://localhost:5173",  // dev frontend
+            "https://thinkboard-frontend-eight.vercel.app", // old frontend (optional)
+            "https://thinkboard-frontend-bdnccqe3c-insharah-devs-projects.vercel.app" // new frontend
         ]
     })
 );
