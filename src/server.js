@@ -16,11 +16,8 @@ const __dirname = path.resolve()
 if (process.env.NODE_ENV !== "production") {
    app.use(
     cors({
-        origin: [
-            "http://localhost:5173",  // dev frontend
-            "https://thinkboard-frontend-eight.vercel.app", // old frontend (optional)
-            "https://thinkboard-frontend-bdnccqe3c-insharah-devs-projects.vercel.app" // new frontend
-        ]
+        origin:  "*",  
+           
     })
 );
 }
