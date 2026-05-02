@@ -3,7 +3,7 @@ import Note from "../models/Note.js"
 
 export async function getAllNOtes(_, res) {
     try {
-        const notes = await Note.find().sort({createdAt:-1})
+        const notes = await Note.find().sort({ createdAt: -1 })
         res.status(200).json(notes)
     } catch (error) {
         console.error("error in getAllNotes controller", error);
@@ -31,7 +31,7 @@ export async function createNotes(req, res) {
         res.status(201).json(savednote)
     } catch (error) {
         console.error("error in createNote controller", error);
-        res.status(500).json({ message: "internal server error!" })
+        res.status(500).json({ message: "All field required!" })
     }
 }
 

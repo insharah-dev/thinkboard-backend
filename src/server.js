@@ -1,3 +1,6 @@
+import dns from 'dns'
+dns.setServers(['8.8.8.8', '1.1.1.1'])
+
 import express from "express"
 import cors from "cors"
 import dotenv from "dotenv";
@@ -14,10 +17,10 @@ const PORT = process.env.PORT || 3000
 const __dirname = path.resolve()
 
 // if (process.env.NODE_ENV !== "production") {
-   app.use(
+app.use(
     cors({
-        origin:  "*"
-           
+        origin: "*"
+
     })
 );
 // }
@@ -43,11 +46,12 @@ if (process.env.NODE_ENV === "production") {
     })
 }
 
-connectDB().then(() => {
+connectDB()
+
     app.listen(PORT, () => {
         console.log("server is running in port:", PORT);
     })
-});
+
 
 
 
