@@ -7,7 +7,7 @@ export async function getAllNOtes(_, res) {
         res.status(200).json(notes)
     } catch (error) {
         console.error("error in getAllNotes controller", error);
-        res.status(500).json({ message: "internal server error!" })
+        res.status(500).json({ message: "Error in fetching notes" })
     }
 }
 
@@ -18,7 +18,7 @@ export async function getNoteById(req, res) {
         res.json(note)
     } catch (error) {
         console.error("error in getNoteById controller", error);
-        res.status(500).json({ message: "internal server error!" })
+        res.status(500).json({ message: "error in fecting specific note" })
     }
 }
 
@@ -50,7 +50,7 @@ export async function updateNotes(req, res) {
 
     } catch (error) {
         console.error("error in updatedNote controller", error);
-        res.status(500).json({ message: "internal server error!" })
+        res.status(500).json({ message: "error in updating notes" })
     }
 }
 
@@ -63,6 +63,6 @@ export async function deleteNotes(req, res) {
         res.status(200).json({ message: "note deleted successfully!" })
     } catch (error) {
         console.error("error in daletedNote controller", error);
-        res.status(500).json({ message: "internal server error!" })
+        res.status(500).json({ message: "error in deleting notes." })
     }
 }
