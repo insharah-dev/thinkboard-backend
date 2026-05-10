@@ -8,5 +8,4 @@ router.get("/getOne/:id", getNoteById);
 router.post("/create", createNotes);
 router.put("/update/:id", updateNotes);
 router.delete("/delete/:id", deleteNotes);
-
 export default router;

@@ -8,7 +8,7 @@ export const connectDB = async ()=>{
     }
     catch(error){
         console.error("Error conecting to monogodb",error);
-        process.exit(1) // exit with failure
+        process.exit(1) 
       
         
     }
